@@ -1,0 +1,295 @@
+/* Estilos gerais */
+body {
+    background-image: url('imagens/bosque.png');
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    background-color: #1a1a1a;
+    line-height: 1.6;
+    
+}
+
+/* Menu lateral */
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #333;
+    padding-top: 50px;
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background: #555;
+}
+
+/* Seção principal */
+.hero {
+    height: 100vh;
+    background-image: url('imagens/bosque.png');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+}
+
+/* Seção de notícias */
+.news-section {
+    padding: 50px;
+    background: #222;
+}
+
+.news-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.news-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #333;
+    border-radius: 10px;
+}
+
+.news-item h3 {
+    margin: 0 0 10px;
+}
+
+.imagemdosite {
+    width: 650px;
+    height: 420px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.news-item span {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #111;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .hero-text p {
+        font-size: 1rem;
+    }
+}
+
+/* Equipe */
+.team-section {
+    text-align: center;
+    padding: 50px;
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+.team-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #f0db4f;
+}
+
+.team-category {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #2c2c2c;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.team-category h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #5865F2;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.team-category p {
+    font-size: 1.2rem;
+    color: #cccccc;
+}
+
+
+/* Scroll mais suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Discord */
+.discord-section {
+    text-align: center;
+    padding: 50px;
+    background: #23272A;
+    color: #ffffff;
+}
+
+.discord-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.discord-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.discord-link {
+    display: inline-flex;
+    align-items: center;
+    background: #5865F2;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    transition: background 0.3s ease;
+}
+
+.discord-link:hover {
+    background: #4854c8;
+}
+
+.discord-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+/* Contato */
+.contact-section {
+    text-align: center;
+    padding: 50px;
+    background: #1f1f1f;
+    color: #ffffff;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #f0db4f;
+}
+
+.contact-group {
+    margin-bottom: 30px;
+}
+
+.contact-group h3 {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #5865F2;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.contact-group ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-group li {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.contact-group a {
+    text-decoration: none;
+    color: #5865F2;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-group a:hover {
+    color: #f0db4f;
+}
+
+.social-icon {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Estilo para o logo no canto inferior direito */
+.logo {
+    position: fixed;
+    bottom: 10px;  /* Distância do fundo da página */
+    right: 10px;    /* Distância da borda direita */
+    width: 80px;   /* Tamanho do logo, pode ajustar */
+    height: auto;
+    z-index: 9999; /* Garante que o logo ficará acima de outros elementos */
+    opacity: 0.7;  /* Torna o logo menos chamativo */
+    transition: opacity 0.3s ease, filter 0.3s ease; /* Transições suaves para mudanças */
+    animation: rotate 25s infinite linear;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg); /* Começa com a imagem sem rotação */
+    }
+    100% {
+        transform: rotate(360deg); /* Gira a imagem 360 graus */
+    }
+}
+
+
+/* Logo início */
+.symbol {
+    width: 300px; /* Tamanho da imagem do símbolo */
+    height: 300px;
+    margin-right: 10px; /* Espaço entre o símbolo e o título */
+}
