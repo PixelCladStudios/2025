@@ -6,7 +6,13 @@ body {
     color: #ffffff;
     background-color: #1a1a1a;
     line-height: 1.6;
-    
+}
+
+/* Ajustes gerais para imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Menu lateral */
@@ -73,6 +79,14 @@ body {
     font-size: 1.2rem;
 }
 
+/* Ajustes para o símbolo da PixelClad Studios */
+.symbol {
+    max-width: 80%; /* Ocupa até 80% da largura da tela no celular */
+    height: auto;   /* Mantém a proporção da imagem */
+    margin: 0 auto; /* Centraliza no celular */
+    display: block;
+}
+
 /* Seção de notícias */
 .news-section {
     padding: 50px;
@@ -97,8 +111,8 @@ body {
 }
 
 .imagemdosite {
-    width: 650px;
-    height: 420px;
+    width: 100%; /* Adapta à largura da tela */
+    height: auto;
     margin-right: 10px;
     vertical-align: middle;
 }
@@ -113,16 +127,6 @@ footer {
     text-align: center;
     padding: 10px;
     background: #111;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .hero-text h1 {
-        font-size: 2rem;
-    }
-    .hero-text p {
-        font-size: 1rem;
-    }
 }
 
 /* Equipe */
@@ -161,7 +165,6 @@ footer {
     font-size: 1.2rem;
     color: #cccccc;
 }
-
 
 /* Scroll mais suave */
 html {
@@ -268,15 +271,15 @@ html {
 /* Estilo para o logo no canto inferior direito */
 .logo {
     position: fixed;
-    bottom: 10px;  /* Distância do fundo da página */
-    right: 10px;    /* Distância da borda direita */
-    width: 80px;   /* Tamanho do logo, pode ajustar */
-    height: auto;
-    z-index: 9999; /* Garante que o logo ficará acima de outros elementos */
-    opacity: 0.7;  /* Torna o logo menos chamativo */
-    transition: opacity 0.3s ease, filter 0.3s ease; /* Transições suaves para mudanças */
+    bottom: 5%; /* Ajuste para ficar um pouco afastado da borda */
+    right: 5%;  /* Evita que fique colado ao canto no celular */
+    width: 60px; /* Reduzido para telas menores */
+    z-index: 9999;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, filter 0.3s ease;
     animation: rotate 25s infinite linear;
 }
+
 @keyframes rotate {
     0% {
         transform: rotate(0deg); /* Começa com a imagem sem rotação */
@@ -286,10 +289,46 @@ html {
     }
 }
 
+/* Responsividade - Ajustes para telas menores */
+@media (max-width: 768px) {
+    /* Menu lateral */
+    .menu-icon {
+        font-size: 24px;
+        top: 10px;
+        left: 10px;
+    }
 
-/* Logo início */
-.symbol {
-    width: 300px; /* Tamanho da imagem do símbolo */
-    height: 300px;
-    margin-right: 10px; /* Espaço entre o símbolo e o título */
+    .sidebar {
+        width: 200px;
+    }
+
+    .sidebar ul li a {
+        padding: 8px 15px;
+    }
+
+    /* Texto no header (hero) */
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+
+    /* Seção de equipe */
+    .team-category {
+        max-width: 90%; /* Ocupa 90% da largura da tela no celular */
+        padding: 10px;
+    }
+
+    /* Discord link */
+    .discord-link {
+        font-size: 1rem;
+        padding: 8px 15px;
+    }
+
+    /* Espaçamento no rodapé */
+    footer {
+        padding: 20px;
+    }
 }
