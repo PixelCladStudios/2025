@@ -261,6 +261,16 @@ html {
     color: #f0db4f;
 }
 
+.direitos {
+    text-decoration: none; /* Remove a linha sublinhada */
+    color: inherit; /* Herda a cor do texto ao invés de usar o padrão do link */
+}
+
+.direitos:hover {
+    text-decoration: none; /* Opcional: adiciona um sublinhado ao passar o mouse */
+    color: #f0db4f; /* Opcional: muda a cor ao passar o mouse */
+}
+
 .social-icon {
     width: 30px;
     height: 30px;
