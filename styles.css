@@ -113,6 +113,12 @@ img {
     background: #333;
     border-radius: 10px;
 }
+.news-item:hover{
+    box-shadow: 0px 0px 20px 0.5px rgba(255, 255, 255, 0.4);
+    margin-right: 1%;
+    margin-left: 1%;
+    font-size: 99%;
+}
 
 .news-item h3 {
     margin: 0 0 10px;
@@ -138,7 +144,7 @@ img {
     background-color: #898989;
     color: white;
     margin: 0 40px 0 40px;
-    box-shadow: 0px 0px 20px 0.5px rgba(251, 255, 0, 0.4);
+    box-shadow: 0px 0px 20px 0.5px rgba(255, 255, 255, 0.4);
     transition-duration: 0.5s;
 }
 
@@ -222,6 +228,7 @@ html {
     padding: 50px;
     background: #23272A;
     color: #ffffff;
+    box-shadow: 0px 0px 120px 10px #4854c8;
 }
 
 .discord-section h2 {
@@ -341,13 +348,19 @@ html {
 }
 
 .logos :nth-child(2){
-    transition-delay: 300ms;
+    transition-delay: 400ms;
 }
 .logos :nth-child(3){
-    transition-delay: 500ms;
+    transition-delay: 700ms;
 }
 .logos :nth-child(4){
-    transition-delay: 800ms;
+    transition-delay: 1000ms;
+}
+.logos :nth-child(5){
+    transition-delay: 1300ms;
+}
+.logos :nth-child(6){
+    transition-delay: 1700ms;
 }
 
 .Cards{
@@ -361,8 +374,8 @@ html {
     text-align: center;
 }
 .CardL {
-    height: 200px;
-    width: 200px; /* ou o que você quiser */
+    height: 300px;
+    width: 300px; /* ou o que você quiser */
     background-color: white;
     border-radius: 10px;
     margin: 5px;
@@ -484,6 +497,13 @@ html {
     }
   }
 
+  @media (max-width: 736px) {
+    .CardL{
+        height: 200px;
+        width: 200px;
+    }
+  }
+
   @media (max-width: 649px) {
     #arvoreD{
         width: 100px;
@@ -492,6 +512,28 @@ html {
     .moeda-alvo {
         width: 100px;
       }
+  }
+  
+  @media (max-width: 533px) {
+    .CardL{
+        height: 150px;
+        width: 150px;
+    }
+    .moeda-alvo{
+        height: 60px;
+        width: 60px;
+    }
+    #arvoreD{
+        height: 60px;
+        width: 60px;
+    }
+  }
+
+  @media (max-width: 436px) {
+    .CardL{
+        height: 100px;
+        width: 100px;
+    }
   }
 
   @media (max-width:  322px){
