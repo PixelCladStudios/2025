@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="PixelClad Studios">
+    <meta property="og:description" content="Transformando ideias em aventuras digitais">
+    <meta property="og:image" content="https://pixelcladstudios.github.io/2025/imagens/bosque.png">
+    <meta property="og:url" content="https://pixelcladstudios.github.io/">
+
+
     <title>PixelClad Studios</title>
 
 
@@ -10,20 +17,18 @@
     <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
     <link rel="manifest" href="imagens/site.webmanifest">
-
-
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!--Menu-->
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div id="pointer" class="menu-icon" onclick="toggleMenu()">☰</div>
     <nav class="sidebar" id="sidebar">
         <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#equipe">Equipe</a></li>
-            <li><a href="#discord">Discord</a></li>
-            <li><a href="#desenvolvimento">Desenvolvimento</a></li>
-            <li><a href="#contato">Contato</a></li>
+            <li><a id="pointer" href="#inicio">Início</a></li>
+            <li><a id="pointer" href="#equipe">Equipe</a></li>
+            <li><a id="pointer" href="#discord">Discord</a></li>
+            <li><a id="pointer" href="#desenvolvimento">Desenvolvimento</a></li>
+            <li><a id="pointer" href="#contato">Contato</a></li>
         </ul>
     </nav>
 
@@ -32,8 +37,10 @@
         <div class="hero-text">
             <img src="imagens/pixelcladstudios.png" alt="Logo PixelClad Studios" class="symbol">
             <h1>PixelClad Studios</h1>
-            <p>Transformando ideias em aventuras digitais.</p>
+            <p>Transformando ideias em aventuras digitais</p>
         </div>
+        <img src="imagens/arvore.png" class="moeda-alvo" alt="Clique aqui!">
+        <img src="imagens/arvore.png" id="arvoreD" alt="Apenas uma árvore">
     </header>
 
     <!--Equipe-->
@@ -75,7 +82,7 @@
     <section id="discord" class="discord-section">
         <h2>Nosso Discord</h2>
         <p>Junte-se à nossa comunidade para discutir ideias, compartilhar feedback e acompanhar novidades!</p>
-        <a href="https://discord.gg/un4EBrSFuQ" target="_blank" class="discord-link">
+        <a id="pointer" href="https://discord.gg/un4EBrSFuQ" target="_blank" class="discord-link">
             <img src="imagens/discord-icon.png" alt="Discord" class="discord-icon">
             Entrar no servidor
         </a>
@@ -111,53 +118,9 @@
                 <p>O programador optou por mudar todos os script para melhorar a otimização, facilidade de continuação para a versão Beta prevista para 2025 e alinhar o código com a versão Android.</p>
                 <span>21 de dezembro de 2024</span>
             </article>
-            <article class="news-item">
-                <h3>Novas Sprites para os inimigos</h3>
-                <p>A quantidade de sprites de inimigos necessários para concluir a Alpha foi completa.</p>
-                <span>19 de dezembro de 2024</span>
-            </article>
-            <article class="news-item">
-                <h3>Apresentamos o personagem</h3>
-                <p><img src="imagens/Personagem_Love.png" alt="Personagem" style="width: 96px; height: auto; display: block;"></p>
-                <span>28 de novembro de 2024</span>
-            </article>
-            <article class="news-item">
-                <h3>Movimentação no PC concluída</h3>
-                <p>Finalizada a movimentação do personagem. Agora é possível controla-lo.</p>
-                <span>25 de novembro de 2024</span>
-            </article>
-            <article class="news-item">
-                <h3>Sprites do personagem feitas</h3>
-                <p>As sprites feitas pelo designer xNicZx foram colocadas no script.</p>
-                <span>25 de novembro de 2024</span>
-            </article>
-            <article class="news-item">
-                <h3>Splash Screen feita</h3>
-                <p>Finalizamos a criação da splash screen inicial.</p>
-                <span>23 de novembro de 2024</span>
-            </article>
-            <article class="news-item">
-                <h3>Criação do Website finalizada</h3>
-                <p>Website criado.</p>
-                <span>12 de novembro de 2024</span>
-            </article>
-            <article class="news-item">
-                <h3>Desenvolvimento iniciado!</h3>
-                <p>Os programadores e designers estão trabalhando a todo vapor para concluir a Alpha até dia 31/12/2024.</p>
-                <span>11 de novembro de 2024</span>
-            </article>
-            <article class="news-item">
-                <h3>Início do Desenvolvimento do jogo: JirryLLo Adventure</h3>
-                <p> É com grande entusiasmo que anunciamos que a equipe de desenvolvimento começará a trabalhar no JirryLLo Adventure no dia 11 de novembro de 2024! 🌟<br>
-<br>
-                    📅 Informações sobre a Versão Alpha:<br>
-                   Data de Lançamento Esperada: 31 de dezembro de 2024<br>
-                   Versão Atual: 0.1<br><br>
-                   🔒 Exclusividade dos Testes:<br>
-                   A versão Alpha será estritamente testada pelos nossos Alpha Testers. Agradecemos a todos que se envolverão nessa fase tão importante!<br><br>
-                   Fique atento para mais novidades e atualizações emocionantes sobre o desenvolvimento do jogo.</p><br><p><b>PixelClad Studios</b></p>
-                <span>05 de novembro de 2024</span>
-            </article>
+
+            <a id="pointer" class="button-news" href="desenvolvimento.html">Leia todos</a>
+
         </section>
     </main>
 
@@ -168,19 +131,19 @@
             <h3>PixelClad Studios</h3>
             <ul>
                 <li>
-                    <a href="https://x.com/PixelCladStudio" target="_blank">
+                    <a id="pointer" href="https://x.com/PixelCladStudio" target="_blank">
                         <img src="imagens/x-icon.png" alt="Twitter" class="social-icon">
                         X (Twitter): @PixelCladStudio
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.youtube.com/@PixelCladStudiosOfc" target="_blank">
+                    <a id="pointer" href="https://www.youtube.com/@PixelCladStudiosOfc" target="_blank">
                         <img src="imagens/youtube-icon.png" alt="YouTube" class="social-icon">
                         YouTube: PixelClad Studios
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.tiktok.com/@pixelcladstudios" target="_blank">
+                    <a id="pointer" href="https://www.tiktok.com/@pixelcladstudios" target="_blank">
                         <img src="imagens/tiktok-icon.png" alt="TikTok" class="social-icon">
                         TikTok: @PixelCladStudios
                     </a>
@@ -192,28 +155,50 @@
             <ul>
                 <li>
                     <strong>MarrrTz - Programador</strong><br>
-                    <a href="https://www.youtube.com/@Marrrtz" target="_blank">
+                    <a id="pointer" href="https://www.youtube.com/@Marrrtz" target="_blank">
                         <img src="imagens/youtube-icon.png" alt="YouTube" class="social-icon">
                         YouTube: @Marrrtz
                     </a>
                 </li>
                 <li>
                     <strong>xNicZx - Designer</strong><br>
-                    <a href="https://www.youtube.com/@xNicZx" target="_blank">
+                    <a id="pointer" href="https://www.youtube.com/@xNicZx" target="_blank">
                         <img src="imagens/youtube-icon.png" alt="YouTube" class="social-icon">
                         YouTube: @xNicZx
                     </a>
                 </li>
             </ul>
         </div>
-    </section>    
+    </section>
+    <!--Cards-->
+    <section class="Cards">
+        <h2>PixelClad Studios</h2>
+        <section class="hidden">
+            <div class="logos">
+                <div class="hidden">
+                    <img class="CardL" src="imagens/pixelcladstudios.png">
+                </div>
+
+                <div class="hidden">
+                    <img class="CardL" src="imagens/marrrtz.jpg">
+                </div>
+
+                <div class="hidden">
+                    <img class="CardL" src="imagens/NicZ.jpg">
+                </div>
+
+                <div class="hidden">
+                    <img class="CardL" src="imagens/gamemaker.webp">
+                </div>
+            </div>
+        </section>
+    </section>
 
     <!-- Símbolo da PixelClad Studios-->
 <img id="logo" src="imagens/logo-branco.png" alt="PixelClad Studios Logo" class="logo">
-
     <footer>
-        <p>&copy; 2024 PixelClad Studios. <a href="https://pixelcladstudios.github.io/LegalInformation" target="_blank" class="direitos">Todos os direitos reservados.</p></a>
+        <p>&copy; 2025 PixelClad Studios. <a id="pointer" href="https://pixelcladstudios.github.io/LegalInformation" target="_blank" class="direitos">Todos os direitos reservados.</p></a>
     </footer>
-    <script src="script.js"></script>
 </body>
+<script src="script.js"></script>
 </html>
