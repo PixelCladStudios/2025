@@ -56,7 +56,7 @@ body, html {
     padding: 10px 20px;
     font-size: 1rem;
     border-radius: 25px;
-    cursor: pointer;
+    cursor: url(imagens/pointer.png), pointer;
     transition: background-color 0.3s;
     margin: 5px;
   }
@@ -79,6 +79,7 @@ body, html {
     padding: 10px 15px;
     border: 1px solid #333;
     border-radius: 10px;
+    cursor: url(imagens/pointer.png), pointer;
   }
 
   .playlist button:hover {
@@ -177,7 +178,7 @@ body, html {
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    cursor: pointer;
+    cursor: url(imagens/pointer.png), pointer;
     transition: background-color 0.3s;
 }
 
@@ -188,7 +189,7 @@ body, html {
 #progressBar {
     width: 250px;
     max-width: 80%;
-    cursor: pointer;
+    cursor: url(imagens/pointer.png), pointer;
 }
 
 #currentTime, #duration {
