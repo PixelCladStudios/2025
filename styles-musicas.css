@@ -220,7 +220,7 @@ body, html {
     border: none;
     border-radius: 50%;
     background-color: #1db954;
-    cursor: pointer;
+    cursor: url(imagens/pointer.png), pointer;
     position: relative;
     transition: background-color 0.3s;
 }
