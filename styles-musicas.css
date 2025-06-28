@@ -1,0 +1,309 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    background-color: #121212;
+    color: #ffffff;
+    transition: background-image 0.5s ease-in-out;
+    cursor: url(imagens/cursor.png), auto;
+  }
+
+  .player-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    backdrop-filter: brightness(0.7) blur(4px);
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 20px;
+    transition: background-image 1.5s ease-in-out;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  #cover {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    transition: opacity 0.8s ease-in-out;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  audio {
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+
+  button {
+    background-color: #1db954;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 5px;
+  }
+
+  button:hover {
+    background-color: #1ed760;
+  }
+
+  .playlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  .playlist button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    margin: 5px;
+    padding: 10px 15px;
+    border: 1px solid #333;
+    border-radius: 10px;
+  }
+
+  .playlist button:hover {
+    background-color: #1db954;
+  }
+
+  .info-box {
+    position: absolute;
+    top: 20px;
+    left: -350px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 15px 20px;
+    border-radius: 10px;
+    max-width: 300px;
+    color: #fff;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    transition: left 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  }
+
+  .info-box.visible {
+    left: 20px;
+    opacity: 1;
+  }
+
+  .info-box.exiting {
+    left: -350px;
+    opacity: 0;
+  }
+
+  .info-box strong {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+
+  footer {
+    text-align: center;
+    padding: 10px;
+    background: #111;
+}
+
+
+
+  /* Estilo para o logo no canto inferior direito */
+.logo {
+    position: fixed;
+    bottom: 5%; /* Ajuste para ficar um pouco afastado da borda */
+    right: 5%;  /* Evita que fique colado ao canto no celular */
+    width: 60px; /* Reduzido para telas menores */
+    z-index: 9999;
+    opacity: 0.7;
+    transition: opacity 0.3s ease, filter 0.3s ease;
+    animation: rotate 25s infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg); /* Começa com a imagem sem rotação */
+    }
+    100% {
+        transform: rotate(360deg); /* Gira a imagem 360 graus */
+    }
+}
+
+
+
+
+.custom-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+}
+
+#playPauseBtn {
+    background-color: #1db954;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#playPauseBtn:hover {
+    background-color: #1ed760;
+}
+
+#progressBar {
+    width: 250px;
+    max-width: 80%;
+    cursor: pointer;
+}
+
+#currentTime, #duration {
+    font-size: 0.9rem;
+}
+
+@media (max-width: 500px) {
+    #progressBar {
+        width: 150px;
+    }
+
+    #playPauseBtn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+
+    #cover {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+#playPauseBtn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: #1db954;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s;
+}
+
+#playPauseBtn:hover {
+    background-color: #1ed760;
+}
+
+/* Ícone de play (triângulo) */
+#playPauseBtn.play::before {
+    content: '';
+    position: absolute;
+    left: 18px;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border-left: 16px solid white;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+
+/* Ícone de pause (duas barras) */
+#playPauseBtn.pause::before, 
+#playPauseBtn.pause::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 24px;
+    top: 12px;
+    background-color: white;
+    border-radius: 1px;
+}
+
+#playPauseBtn.pause::before {
+    left: 14px;
+}
+
+#playPauseBtn.pause::after {
+    right: 14px;
+}
+
+/* Responsivo */
+@media (max-width: 500px) {
+    #playPauseBtn {
+        width: 40px;
+        height: 40px;
+    }
+
+    #playPauseBtn.play::before {
+        left: 14px;
+        top: 10px;
+        border-left: 12px solid white;
+        border-top: 9px solid transparent;
+        border-bottom: 9px solid transparent;
+    }
+
+    #playPauseBtn.pause::before,
+    #playPauseBtn.pause::after {
+        width: 4px;
+        height: 20px;
+        top: 10px;
+    }
+
+    #playPauseBtn.pause::before {
+        left: 12px;
+    }
+
+    #playPauseBtn.pause::after {
+        right: 12px;
+    }
+}
+
+
+#pointer{
+    cursor: url(imagens/pointer.png), pointer;
+}
+
+
+.direitos {
+    text-decoration: none; /* Remove a linha sublinhada */
+    color: inherit; /* Herda a cor do texto ao invés de usar o padrão do link */
+}
+
+.direitos:hover {
+    text-decoration: none; /* Opcional: adiciona um sublinhado ao passar o mouse */
+    color: #f0db4f; /* Opcional: muda a cor ao passar o mouse */
+}

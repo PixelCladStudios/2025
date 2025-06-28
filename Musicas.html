@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Músicas FaLLing Star</title>
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
+    <link rel="manifest" href="imagens/site.webmanifest">
+    <link rel="stylesheet" href="styles-musicas.css">
+
+</head>
+
+<body>
+    <div class="player-container" id="player-container">
+        <div class="info-box" id="info-box">
+            <strong id="info-title">Título</strong>
+            <span id="info-author">Autor</span><br>
+            <span id="info-album">Álbum</span><br>
+            <span id="info-year">2025</span>
+        </div>
+
+
+
+        <div class="player-container" id="player-container">
+            <div class="info-box" id="info-box">
+                <strong id="info-title">Título</strong>
+                <span id="info-author">Autor</span><br>
+                <span id="info-album">Álbum</span><br>
+                <span id="info-year">2025</span>
+            </div>
+
+            <h1>Tocando Agora</h1>
+
+            <div class="custom-player">
+                <img id="cover" src="cover1.jpg" alt="Capa da música">
+                <h2 id="title">Título da Música</h2>
+
+                <div class="controls">
+                    <button id="playPauseBtn" class="play"></button>
+                    <input type="range" id="progressBar" min="0" max="100" value="0">
+                    <span id="currentTime">0:00</span> / <span id="duration">0:00</span>
+                </div>
+
+                <button onclick="nextSong()">Próxima Música</button>
+
+                <div class="playlist" id="playlist"></div>
+            </div>
+
+            <audio id="audio">
+                <source src="musica1.mp3" type="audio/mpeg">
+                Seu navegador não suporta o elemento de áudio.
+            </audio>
+        </div>
+
+        <div class="playlist" id="playlist"></div>
+    </div>
+    <img id="logo" src="imagens/logo-branco.png" alt="PixelClad Studios Logo" class="logo">
+    <footer>
+        <p>&copy; 2025 PixelClad Studios. <a id="pointer" href="https://pixelcladstudios.github.io/LegalInformation"
+                target="_blank" class="direitos">Todos os direitos reservados.</p></a>
+    </footer>
+    <script>
+        const songs = [
+            { title: "Boss Fight FS", file: "audios/Boss-Fight-FS.mp3", cover: "audios/Boss-Fight-FS.jpg", author: "PixelClad Studios", album: "FaLLing Star Album" },
+            { title: "Boss Fight Two FS", file: "audios/Boss-Fight-Two-FS.mp3", cover: "audios/Boss-Fight-Two-FS.jpg", author: "PixelClad Studios", album: "FaLLing Star Album" },
+            { title: "FaLLing Star FS", file: "audios/FaLLing-Star-FS.mp3", cover: "audios/FaLLing-Star-FS.jpg", author: "PixelClad Studios", album: "FaLLing Star Album" },
+            { title: "Islands in a Lost World FS", file: "audios/Islands-in-a-Lost-World-FS.mp3", cover: "audios/Islands-in-a-Lost-World-FS.jpg", author: "PixelClad Studios", album: "FaLLing Star Album" },
+            { title: "Knights of Passion FS", file: "audios/Knights-of-Passion-FS.mp3", cover: "audios/Knights-of-Passion-FS.jpg", author: "PixelClad Studios", album: "FaLLing Star Album" },
+            { title: "Liberation of the Kingdom Pt 1 FS", file: "audios/Liberation-of-the-Kingdom-Pt-1-FS.mp3", cover: "audios/Liberation-of-the-Kingdom-FS.jpg", author: "PixelClad Studios", album: "FaLLing Star Album" },
+            { title: "Liberation of the Kingdom PT 2 FS", file: "audios/Liberation-of-the-Kingdom-PT-2-FS.mp3", cover: "audios/Liberation-of-the-Kingdom-FS.jpg", author: "PixelClad Studios", album: "FaLLing Star Album" },
+            { title: "Looking for Someone FS", file: "audios/Looking-for-Someone-FS.mp3", cover: "audios/Looking-for-Someone-FS.jpg", author: "PixelClad Studios", album: "FaLLing Star Album" },
+            { title: "Walking FS", file: "audios/Walking-FS.mp3", cover: "audios/Walking-FS.jpg", author: "PixelClad Studios", album: "FaLLing Star Album" }
+        ];
+
+        let currentSong = 0;
+        const audio = document.getElementById('audio');
+        const cover = document.getElementById('cover');
+        const title = document.getElementById('title');
+        const container = document.getElementById('player-container');
+        const playlist = document.getElementById('playlist');
+        const infoBox = document.getElementById('info-box');
+        const infoTitle = document.getElementById('info-title');
+        const infoAuthor = document.getElementById('info-author');
+        const infoAlbum = document.getElementById('info-album');
+        const infoYear = document.getElementById('info-year');
+
+        function showInfoBox() {
+            infoBox.classList.remove('exiting');
+            infoBox.classList.add('visible');
+            clearTimeout(infoBox.timeout);
+            infoBox.timeout = setTimeout(() => {
+                infoBox.classList.remove('visible');
+                infoBox.classList.add('exiting');
+            }, 10000);
+        }
+
+        function loadSong(index) {
+            const song = songs[index];
+            audio.src = song.file;
+            cover.src = song.cover;
+            title.textContent = song.title;
+            container.style.backgroundImage = `url('${song.cover}')`;
+            infoTitle.textContent = song.title;
+            infoAuthor.textContent = song.author;
+            infoAlbum.textContent = song.album;
+            infoYear.textContent = "2025";
+            currentSong = index;
+            audio.play();
+            showInfoBox();
+        }
+
+        function nextSong() {
+            currentSong = (currentSong + 1) % songs.length;
+            loadSong(currentSong);
+        }
+
+        function createPlaylist() {
+            songs.forEach((song, index) => {
+                const btn = document.createElement('button');
+                btn.textContent = song.title;
+                btn.onclick = () => loadSong(index);
+                playlist.appendChild(btn);
+            });
+        }
+
+        createPlaylist();
+        loadSong(currentSong);
+
+        const playPauseBtn = document.getElementById('playPauseBtn');
+        const progressBar = document.getElementById('progressBar');
+        const currentTimeDisplay = document.getElementById('currentTime');
+        const durationDisplay = document.getElementById('duration');
+
+        // Alternar Play/Pause
+        playPauseBtn.onclick = function () {
+            if (audio.paused) {
+                audio.play();
+                playPauseBtn.classList.remove('play');
+                playPauseBtn.classList.add('pause');
+            } else {
+                audio.pause();
+                playPauseBtn.classList.remove('pause');
+                playPauseBtn.classList.add('play');
+            }
+        };
+
+
+        // Atualizar barra de progresso e tempo
+        audio.ontimeupdate = function () {
+            if (audio.duration) {
+                const progress = (audio.currentTime / audio.duration) * 100;
+                progressBar.value = progress;
+                currentTimeDisplay.textContent = formatTime(audio.currentTime);
+            }
+        };
+
+        // Mover a barra e pular para outro ponto da música
+        progressBar.oninput = function () {
+            audio.currentTime = (progressBar.value / 100) * audio.duration;
+        };
+
+        // Atualizar tempo total quando carregar
+        audio.onloadedmetadata = function () {
+            durationDisplay.textContent = formatTime(audio.duration);
+        };
+
+        // Formatar o tempo no formato mm:ss
+        function formatTime(seconds) {
+            const minutes = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+        }
+
+
+    </script>
+</body>
+
+</html>

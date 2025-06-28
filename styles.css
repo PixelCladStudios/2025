@@ -405,6 +405,51 @@ html {
     transform: translateX(0);
 }
 
+
+
+/* FaLLing Star */
+.FaLLing{
+    background-image: url('imagens/FaLLing-Star.jpg');
+    width: auto;
+    height: auto;
+    margin: -21px 0 -21px 0;
+    text-align: center;
+    align-content: center;
+    padding: 10%;
+}
+.FaLLing h2{
+    color: #f0db4f;
+    text-shadow: 2px 3px rgba(22, 22, 22, 0.575);
+
+}
+.FS-Conteudo{
+    background-color: rgba(22, 22, 22, 0.938);
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    color: rgba(255, 255, 255, 0.747);
+}
+.FS-Conteudo img{
+    width: 8%;
+    padding: 10px 0px 10px 5px;
+}
+.FS-Musics{
+    text-decoration: none;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.103);
+    margin: 20px 0 20px 5px;
+    padding: 0 5px 0 1px;
+    border-radius: 10px;
+    transition: 1s;
+}
+.FS-Musics:hover{
+    background-color: rgba(22, 22, 22, 0.938);
+    color: #aaa;
+}
+
+
+
 @keyframes rotate {
     0% {
         transform: rotate(0deg); /* Começa com a imagem sem rotação */
